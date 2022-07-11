@@ -1,16 +1,15 @@
 {
-  "name": "@branlice/retry",
-  "version": "1.0.0",
+  "name": "http-retries",
+  "version": "0.0.3",
   "description": "",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "files": [
-    "./lib"
+    "lib/**/*"
   ],
   "scripts": {
     "test": "jest",
-    "build": "tsc",
-    "publish": "npm publish --access=public"
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
