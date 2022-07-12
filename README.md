@@ -15,12 +15,9 @@ const fetchRetry = createRetry(fetch, {
     
     // 在什么情况下会执行重试, 返回Promise<boolean> 或 boolean
     // 当为true时会继续重试, 直到retries次数执行完
-    condition: (response: Promise<Response>, context: { input: RequestInfo | URL; init?: RequestInit | undefined; retryOptions: any; count: number; }) =>{
-        return new Promise( async resolve => {
-            const data = await response;
-            const retryCondition = data.status >= 400 && context.input.toString().includes("/api/safe");
-            resolve(retryCondition);
-        })
+    condition: async function (response: Promise<Response>, context: { input: RequestInfo | URL; init?: RequestInit | undefined; retryOptions: any; count: number; }){
+        //. do something... 
+        return boolean;
     }
 });
 ```
