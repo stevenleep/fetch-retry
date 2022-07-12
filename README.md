@@ -1,6 +1,9 @@
 # retry
+`Fetch` `Axios` 请求重试库, 研发中
 
-`Fetch` `Axios` 请求重试库
+- [x] Fetch 需要为其增加 `拦截器` 支持, 通过分析响应数据判断是否需要去retry(retry规则由开发者自行实现)
+- [ ] Axios 扩展响应拦截器
+- [ ] 更优雅的retry
 
 ## Fetch Example
 **改造你的Fetch方法**
