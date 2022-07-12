@@ -11,7 +11,7 @@ export interface CreateRetryOptions {
     plugins?: []
 }
 
-function createRetry(clientHttpInstance: FetchFunction, retryOptions?: CreateRetryOptions): FetchFunction {
+function createRetry(clientHttpInstance: FetchFunction, retryOptions: CreateRetryOptions): FetchFunction {
     // TODO: 临时测试(认为Function为Fetch);
     const isFetch = isFunction(clientHttpInstance);
     if(isFetch) {

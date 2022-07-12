@@ -12,6 +12,6 @@ export interface CreateRetryOptions {
     onRetry?: () => any;
     plugins?: [];
 }
-declare function createRetry(clientHttpInstance: FetchFunction, retryOptions?: CreateRetryOptions): FetchFunction;
+declare function createRetry(clientHttpInstance: FetchFunction, retryOptions: CreateRetryOptions): FetchFunction;
 export default createRetry;
 //# sourceMappingURL=index.d.ts.map
