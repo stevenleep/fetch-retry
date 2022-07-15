@@ -1,17 +1,12 @@
-import type { FetchFunction } from "./fecth";
+import type { Fetch, ProcessRetryContext } from "./fecth";
 export interface CreateRetryOptions {
     enable?: boolean;
     retries: number;
-    condition(originalResponse: Promise<Response>, context: {
-        input: RequestInfo | URL;
-        init?: RequestInit | undefined;
-        retryOptions: any;
-        count: number;
-    }): boolean | Promise<boolean>;
+    condition: (promiseResponse: Promise<Response>, response: Response, count: number, context: ProcessRetryContext, option?: CreateRetryOptions) => boolean | Promise<boolean>;
     delay: number;
     onRetry?: () => any;
     plugins?: [];
 }
-declare function createRetry(clientHttpInstance: FetchFunction, retryOptions: CreateRetryOptions): FetchFunction;
+declare function createRetry(clientHttpInstance: Fetch, retryOptions: CreateRetryOptions): Fetch;
 export default createRetry;
 //# sourceMappingURL=index.d.ts.map

@@ -37,24 +37,24 @@ export function isMeaningful(value: any, meaningfulOptions: MeaningfulOptions = 
     allowEmptyString: false,
     allowMinus: true,
 }): boolean {
-    if(isString(value) && isEmptyString(value) && meaningfulOptions.allowEmptyString) return true;
-    if(isNumber(value) && isEmptyNumber(value) && meaningfulOptions.allowEmptyNumber) return true;
+    if (isString(value) && isEmptyString(value) && meaningfulOptions.allowEmptyString) return true;
+    if (isNumber(value) && isEmptyNumber(value) && meaningfulOptions.allowEmptyNumber) return true;
 
     return !!value;
 }
 
 
-export function isEmptyString(value: any):boolean {
+export function isEmptyString(value: any): boolean {
     return value === "";
 }
-export function isEmptyNumber(value: any):boolean {
+export function isEmptyNumber(value: any): boolean {
     return value === 0;
 }
 
 // isPromise
 // ref: https://262.ecma-international.org/6.0/#sec-promise.then
 export function isPromise(valueOrPromiseInstance: any, strict = true): boolean {
-    if(!isMeaningful(valueOrPromiseInstance)) return false;
+    if (!isMeaningful(valueOrPromiseInstance)) return false;
     const isStringPromise = createTypeInspectorSimpleFactory(valueOrPromiseInstance, "Promise");
     const isThenable = isThenabled(valueOrPromiseInstance);
     return strict && isStringPromise && isThenable;
@@ -64,6 +64,6 @@ export function isThenabled(valueOrPromiseInstance: any): boolean {
     return isMeaningful(valueOrPromiseInstance) && isFunction(valueOrPromiseInstance.then);
 }
 
-function createTypeInspectorSimpleFactory(value: any, typeOfExpectation:string) {
+function createTypeInspectorSimpleFactory(value: any, typeOfExpectation: string) {
     return Object.prototype.toString.call(value) === `[object ${typeOfExpectation}]`;
 }

@@ -1,18 +1,15 @@
 {
-  "name": "demo",
+  "name": "simple-fetch-retry",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "vite dev --port 9000"
+    "dev": "vite"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "vite": "^2.9.14"
-  },
-  "dependencies": {
-    "fetch-retry": "^5.0.3"
+    "vite": "^3.0.0"
   }
 }

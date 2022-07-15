@@ -1,14 +1,10 @@
 lockfileVersion: 5.4
 
 specifiers:
-  fetch-retry: ^5.0.3
-  vite: ^2.9.14
-
-dependencies:
-  fetch-retry: registry.npmmirror.com/fetch-retry/5.0.3
+  vite: ^3.0.0
 
 devDependencies:
-  vite: registry.npmmirror.com/vite/2.9.14
+  vite: registry.npmmirror.com/vite/3.0.0
 
 packages:
 
@@ -262,12 +258,6 @@ packages:
       esbuild-windows-arm64: registry.npmmirror.com/esbuild-windows-arm64/0.14.49
     dev: true
 
-  registry.npmmirror.com/fetch-retry/5.0.3:
-    resolution: {integrity: sha512-uJQyMrX5IJZkhoEUBQ3EjxkeiZkppBd5jS/fMTJmfZxLSiaQjv2zD0kTvuvkSH89uFvgSlB6ueGpjD3HWN7Bxw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/fetch-retry/-/fetch-retry-5.0.3.tgz}
-    name: fetch-retry
-    version: 5.0.3
-    dev: false
-
   registry.npmmirror.com/fsevents/2.3.2:
     resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/fsevents/-/fsevents-2.3.2.tgz}
     name: fsevents
@@ -367,22 +357,25 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  registry.npmmirror.com/vite/2.9.14:
-    resolution: {integrity: sha512-P/UCjSpSMcE54r4mPak55hWAZPlyfS369svib/gpmz8/01L822lMPOJ/RYW6tLCe1RPvMvOsJ17erf55bKp4Hw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vite/-/vite-2.9.14.tgz}
+  registry.npmmirror.com/vite/3.0.0:
+    resolution: {integrity: sha512-M7phQhY3+fRZa0H+1WzI6N+/onruwPTBTMvaj7TzgZ0v2TE+N2sdLKxJOfOv9CckDWt5C4HmyQP81xB4dwRKzA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vite/-/vite-3.0.0.tgz}
     name: vite
-    version: 2.9.14
-    engines: {node: '>=12.2.0'}
+    version: 3.0.0
+    engines: {node: '>=14.18.0'}
     hasBin: true
     peerDependencies:
       less: '*'
       sass: '*'
       stylus: '*'
+      terser: ^5.4.0
     peerDependenciesMeta:
       less:
         optional: true
       sass:
         optional: true
       stylus:
+        optional: true
+      terser:
         optional: true
     dependencies:
       esbuild: registry.npmmirror.com/esbuild/0.14.49
