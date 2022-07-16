@@ -1,6 +1,13 @@
-# retry
+## retry
 
 为 Fetch 增加重试功能
+
+## npm
+```bash
+npm i http-retries
+```
+
+## usage
 
 ```typescript
 import { enhanceFetchRetry as createFetchRetry } from "../../lib/fecth";
@@ -30,7 +37,7 @@ myFetch(errorURL)
   .then((res) => {
     console.log("Success", res);
   })
-  .catch((...errors) => {
+  .catch((errors) => {
     console.log(errors);
   });
 ```
